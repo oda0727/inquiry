@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}">確認画面</title>
+	<link th:href="@{/style.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <h1 class="title" th:text="${title}">タイトル</h1>
+    <h3 th:text="${title2}"></h3>
+
+    <div th:object="${inquiryForm}">
+    <div>
+        <p class="text">お問い合わせ項目:</p>
+        <p  th:text="*{inquiryType}"></p>
+    </div>
+
+    <div>
+        <p class="text">お名前：</p>
+        <p th:text="*{inquiryUser}"></p>
+    </div>
+
+    <div>
+        <p class="text">メールアドレス:</p>
+        <p th:text="*{inquiryUserMail}"></p>
+    </div>
+
+    <div>
+        <p class="text">お問い合わせ内容:</p>
+        <p th:text="*{inquiryInfo}"></p>
+    </div>
+
+
+    <form method="post" action="#" th:action="@{/save}">
+          <input type="hidden" name="inquiryType" th:value="*{inquiryType}">
+          <input type="hidden" name="inquiryUser" th:value="*{inquiryUser}">
+          <input type="hidden" name="inquiryUserMail" th:value="*{inquiryUserMail}">
+          <input type="hidden" name="inquiryInfo" th:value="*{inquiryInfo}">
+
+        <input class="submit" type="submit" value="送信" />
+        <input class="submit2" type="button" value="戻る" onclick="history.back();" />
+
+    </form>
+    </div>
+
+    </body>
+    </html>

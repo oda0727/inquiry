@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}">お問い合わせ</title>
+	<link th:href="@{/style.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1 class="title" th:text="${title}"></h1>
+	
+	<h2 class="title2" th:text="${complete}">送信完了</h2>
+
+    <form method="post" action="#" th:action="@{/inquiry/confirm}" th:object="${inquiryForm}" >
+		<div class="cp_iptxt">
+            <div class="label"><label  class="ef" for="inquiryType">お問い合わせ項目: </label></div>
+                 <select name="inquiryType" th:value="inquiryType">
+              		<option value="1">選択肢のサンプル1</option>
+              		<option value="2">選択肢のサンプル2</option>
+            	</select>
+		</div>
+		<div class="cp_iptxt">
+            <div class="label"><label class="ef" for ="inquiryUser">お名前： </label></div>
+      			<input name="inquiryUser" type="text" th:value = "*{inquiryUser}"><br>
+      	</div>
+      	<div class="error" th:if="${#fields.hasErrors('inquiryUser')}" th:errors ="*{inquiryUser}">error</div>
+
+		<div class="cp_iptxt">
+    		<div class="label"><label class="ef" for ="inquiryUserMail">メールアドレス： </label></div>
+    			<input name="inquiryUserMail" type="text" th:value = "*{inquiryUserMail}"><br>
+		</div>
+    	<div class="error" th:if="${#fields.hasErrors('inquiryUserMail')}" th:errors ="*{inquiryUserMail}">error</div>
+
+		<div class="cp_iptxt">
+			<div class="label"><label class="ef" for = "inquiryInfo">お問い合わせ内容： </label></div>
+    		<textarea name="inquiryInfo" cols="40" rows="3"></textarea>
+    	</div>
+    	<div  class="error" th:if="${#fields.hasErrors('inquiryInfo')}" th:errors ="*{inquiryInfo}">error</div><br>
+
+		<input class="submit" type="submit" value = "確認ページへ" >
+</form>
+
+
+
+</body>
+</html>

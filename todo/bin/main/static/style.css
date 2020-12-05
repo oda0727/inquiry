@@ -1,0 +1,136 @@
+html {
+	min-height: 100%;
+}
+
+body {
+	background: linear-gradient(to right bottom, rgb(255, 159, 69),
+		rgba(255, 0, 234, 0.596));
+}
+
+p {
+	position: relative;
+	width: 80%;
+	margin: 8px 3%;
+	box-sizing: border-box;
+}
+
+.title {
+	position: relative;
+	width: 80%;
+	margin: 8px 3%;
+	display  : inline-block;
+  	animation: rollkAnime 2s linear infinite;
+  	color    : #6666ff;
+  	font-size: 160%;
+}
+@keyframes rollkAnime{
+   50% {
+         color    : #00ff00;
+         transform: rotateX(180deg);
+       }
+  	100% {
+         color    : #6666ff;
+         transform: rotateX(360deg);
+       }
+	}
+	}
+
+.title2 {
+	position: relative;
+	width: 80%;
+	margin: 8px 3%;
+	color: #0072d0;
+	text-shadow: 10px 5px #80ffff91;
+	box-sizing: border-box;
+}
+
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 8px 3%;
+	box-sizing: border-box;
+}
+
+.label {
+	color: #000000;
+}
+
+.text {
+	position: relative;
+	width: 80%;
+	margin: 8px 3%;
+	box-sizing: border-box;
+	color: #000000;
+	font-weight: bold;
+	background: linear-gradient(transparent 75%, #ffb5ad 75%);
+}
+
+.cp_iptxt select {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 320px;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #000000;
+	border: 1px solid #ffffff;
+	box-shadow: 1px 1px 2px 0 #707070 inset;
+	border-radius: 4px;
+}
+
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 320px;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #ffffff;
+	box-shadow: 1px 1px 2px 0 #707070 inset;
+	border-radius: 4px;
+}
+
+.ef input[type='text']:focus {
+	outline: none;
+	box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+	background: red;
+}
+
+.cp_iptxt textarea {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 320px;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #000000;
+	border: 1px solid #ffffff;
+	box-shadow: 1px 1px 2px 0 #707070 inset;
+	border-radius: 4px;
+}
+
+.submit {
+	position: relative;
+	width: 15%;
+	margin: 8px 3%;
+	color: #000000;
+	box-sizing: border-box;
+}
+
+.submit2 {
+	position: relative;
+	width: 15%;
+	margin: 8px 3%;
+	margin-left: 0;
+	color: #000000;
+	box-sizing: border-box;
+}
+
+.error {
+	position: relative;
+	width: 80%;
+	margin: 8px 3%;
+	color: red;
+	box-sizing: border-box;
+}
